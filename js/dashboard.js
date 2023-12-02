@@ -78,7 +78,7 @@ let ss = date.getSeconds();
 
   
 
-    
+  if(hh==6 && mm == 20 && ss == 0 && session == "AM"){    
     navigator.serviceWorker.ready.then((swReg) => {
       var options = {
        body: "Got To Fajar Prayer",
@@ -87,7 +87,7 @@ let ss = date.getSeconds();
       };
     swReg.showNotification("Namaz Reminder",options)
      } )
- 
+    }
       
     }
     else if(hh <= 12  && session == "PM" && hh < 4){
