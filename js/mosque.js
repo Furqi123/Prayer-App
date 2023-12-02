@@ -209,3 +209,9 @@ Swal.fire({
 
   
 }
+
+
+let profileName =  document.getElementById('profileName');
+let getdata = localStorage.getItem("userData");
+getdata = JSON.parse(getdata)
+profileName.innerHTML =  getdata.username;

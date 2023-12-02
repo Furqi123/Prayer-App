@@ -129,6 +129,11 @@ hadith();
   setInterval(function(){
 
   hadith()
-  },5000)
+  },4000)
 
  
+
+  let profileName =  document.getElementById('profileName');
+let getdata = localStorage.getItem("userData");
+getdata = JSON.parse(getdata)
+profileName.innerHTML =  getdata.username;

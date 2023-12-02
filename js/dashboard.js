@@ -41,7 +41,7 @@ let date = new Date();
  let hh = date.getHours();
  let mm = date.getMinutes();
 let ss = date.getSeconds();
- let session = "PM";
+ let session = "AM";
 
 
   if(hh == 0){
@@ -155,7 +155,7 @@ let ss = date.getSeconds();
       box4NamazName.innerText = "Asar";
       box4NamazTime.innerText = "4:45 PM";
 
-      if(hh == 5 && mm == 45 && ss == 0 && session == "PM"){
+      if(hh == 5 && mm == 45 && ss == 0 && session == "PM" && hh<7){
         navigator.serviceWorker.ready.then((swReg) => {
           var options = {
            body: "Got To Magrib Prayer",
